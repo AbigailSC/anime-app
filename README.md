@@ -1,0 +1,1 @@
+<h1>AnimeApp</h1>
