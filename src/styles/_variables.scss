@@ -1,0 +1,42 @@
+/* Colors */
+
+$baseColor: rgb(238, 24, 140);
+$secondaryColor: rgb(255, 77, 109);
+$backgroundColor: rgb(13, 13, 13);
+$backgroundSecondaryColor: rgb(43, 45, 66);
+$backgroundTertiaryColor: rgb(237, 237, 233);
+
+/* Fonts */
+
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 700;
+
+/* Breakpoints */
+
+$mobile: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-lg: 1280px;
+$desktop-xl: 1536px;
+
+/* Transitions */
+
+@mixin transition($property, $duration: 0.3s, $timing: ease-in-out) {
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+/* Animations */
+
+@mixin animation($name, $duration: 1s, $timing: ease-in-out, $delay: 0s, $iteration: 1) {
+  -webkit-animation: $name $duration $timing $delay $iteration;
+  -moz-animation: $name $duration $timing $delay $iteration;
+  -ms-animation: $name $duration $timing $delay $iteration;
+  -o-animation: $name $duration $timing $delay $iteration;
+  animation: $name $duration $timing $delay $iteration;
+}

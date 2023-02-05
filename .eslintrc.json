@@ -27,6 +27,11 @@
     "ignorePatterns": ["vite.config.ts"],
     "rules": {
         "prettier/prettier": "error",
-        "@typescript-eslint/no-floating-promises": "off"
+        "@typescript-eslint/no-misused-promises": [
+            "error",
+            {
+                "checksVoidReturn": false
+            }
+        ]
     }
 }
