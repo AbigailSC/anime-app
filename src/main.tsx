@@ -15,7 +15,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       authorizationParams={{
         redirect_uri: window.location.origin
       }}
-      onRedirectCallback={() => { }}
     >
       <App />
     </Auth0Provider>
