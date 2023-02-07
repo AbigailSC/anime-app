@@ -3,7 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 const Profile: React.FC = () => {
   const { user, isAuthenticated } = useAuth0();
-  console.log(isAuthenticated);
+  console.log(isAuthenticated, user);
   return (
     <>
       {isAuthenticated && (
@@ -12,6 +12,7 @@ const Profile: React.FC = () => {
           <h3>{user?.name}</h3>
         </div>
       )}
+      <h3>NAVBAR FUNCAAAA</h3>
     </>
   );
 };
