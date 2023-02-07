@@ -13,7 +13,7 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
       '@assets': path.resolve(__dirname, './src/assets'),
       '@services': path.resolve(__dirname, './src/services'),
-      '@store': path.resolve(__dirname, './src/store'),
+      '@store': path.resolve(__dirname, './src/redux'),
       '@views': path.resolve(__dirname, './src/views')
     }
   },
