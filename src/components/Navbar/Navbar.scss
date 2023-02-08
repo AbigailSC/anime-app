@@ -1,0 +1,232 @@
+@import '@styles/_variables.scss';
+@import '@styles/_responsive.scss';
+
+.b-navbar{
+  background-color: $backgroundSecondaryColor;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  position: fixed;
+}
+.b-nabvar__title span {
+  color: $baseColor;
+}
+.b-container__form-group {
+  position: relative;
+  width: 80%;
+}
+.b-form-group__input {
+  width: 100%;
+  height: 40px;
+  padding: 0 1em;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $backgroundTertiaryColor;
+  border-radius: 1em;
+}
+.b-form-group__btn {
+  position: absolute;
+  cursor: pointer;
+  top: 22px;
+  right: 8px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: $backgroundTertiaryColor;
+  border: none;
+  font-size: 1.25em;
+  @include transition(all);
+}
+.b-form-group__btn:hover {
+  color: #fff;
+  @include transition(all);
+}
+.b-items__ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+}
+.b-nabvar__title{
+  color: $backgroundTertiaryColor;
+  font-size: 1.5em;
+  font-weight: $fontWeightBold;
+  cursor: pointer;
+}
+.b-items__li {
+  color: $backgroundTertiaryColor;
+  cursor: pointer;
+  font-size: 1em;
+  @include transition(all, 0.2s, ease);
+}
+.b-items__li:hover > span {
+  color: $baseColor;
+  @include transition(all, 0.2s, ease);
+}
+.b-container__form-group {
+  position: relative;
+  width: 30%;
+}
+
+.b-container-items--hidden, .b-container-items {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 80%;
+}
+.b-navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 2em;
+}
+.b-container__btn {
+  display: none;
+}
+
+@include mobile {
+  .b-navbar--mobile{
+    height: 100vh;
+  }
+  .b-navbar__container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  .b-container__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 2em;
+  }
+  .b-nabvar__title{
+    color: $backgroundTertiaryColor;
+    font-size: 1.5em;
+    font-weight: $fontWeightBold;
+    cursor: pointer;
+  }
+  .b-container-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+  }
+  .b-container-items--hidden {
+    display: none;
+  }
+  .b-items__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+  }
+  .b-container__btn {
+    background-color: transparent;
+    cursor: pointer;
+    color: $backgroundTertiaryColor;
+    border: none;
+    font-size: 1.25em;
+    display: block;
+  }
+  .b-items__li {
+    color: $backgroundTertiaryColor;
+    cursor: pointer;
+    font-size: 1.25em;
+    @include transition(all, 0.2s, ease);
+  }
+  .b-container__form-group {
+    position: relative;
+    width: 80%;
+  }
+}
+
+@include tablet {
+  .b-navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 1em;
+  }
+  .b-container__header{
+    display: flex;
+    padding-right: 1em;
+  }
+  .b-nabvar__title{
+    color: $backgroundTertiaryColor;
+    font-size: 1em;
+    font-weight: $fontWeightBold;
+    cursor: pointer;
+  }
+  .b-container-items--hidden, .b-container-items {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@include desktop {
+  .b-container__header{
+    display: flex;
+    padding-right: 2em;
+  }
+  .b-container__form-group {
+    position: relative;
+    width: 50%;
+  }
+}
+
+@include desktop-lg {
+  .b-navbar__container {
+    justify-content: space-between;
+  }
+  .b-container__form-group {
+    position: relative;
+    width: 40%;
+  }
+  .b-items__ul {
+    width: 60%;
+  }
+  .b-container__form-group {
+    width: 25%;
+  }
+  .b-container__header{
+    display: flex;
+    padding-right: 0;
+  }
+}
+
+@include desktop-xl {
+  .b-container__form-group {
+    position: relative;
+    width: 30%;
+  }
+  .b-items__ul {
+    width: 60%;
+  }
+  .b-container__form-group {
+    width: 25%;
+  }
+  .b-container__header{
+    display: flex;
+    padding-right: 0;
+  }
+}

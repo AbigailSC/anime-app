@@ -19,13 +19,13 @@
 }
 
 @mixin desktop-lg {
-  @media (min-width: ($desktop + 1)) and (max-width: ($desktop-lg - 1)) {
+  @media (min-width: $desktop ) and (max-width: ($desktop-lg - 1)) {
     @content;
   }
 }
 
 @mixin desktop-xl {
-  @media (min-width: ($desktop-lg + 1)) and (max-width: ($desktop-xl - 1)) {
+  @media (min-width: $desktop-lg) and (max-width: ($desktop-xl - 1)) {
     @content;
   }
 }
