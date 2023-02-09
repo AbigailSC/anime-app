@@ -20,10 +20,10 @@ const SliderHome: React.FC = () => {
   }: pageButtonsProps): JSX.Element => {
     return (
       <button
-        className={`b-slider ${active ? 'active' : ''}`}
+        className={`b-slider__btn ${active ? 'active' : ''}`}
         onClick={onClick}
       >
-        {index + 1}
+        {/* {index + 1} */}
       </button>
     );
   };
@@ -50,7 +50,11 @@ const SliderHome: React.FC = () => {
       <div className="b-dots-container">
         {imagesArray.map((image, index) => {
           return (
-            <button key={image.id} onClick={() => handleResetDelay()}>
+            <button
+              className="b-dots--btn"
+              key={image.id}
+              onClick={() => handleResetDelay()}
+            >
               {pageButtons({
                 index,
                 active: index === currentIndex,

@@ -43,3 +43,7 @@ $desktop-xl: 1536px;
 }
 
 /* Mixins */
+
+@mixin opacityColor($color, $opacity) {
+  background-color: rgba($color, $opacity);
+}
