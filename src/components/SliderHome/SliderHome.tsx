@@ -36,8 +36,13 @@ const SliderHome: React.FC = () => {
   useInterval(nextCard, delay);
 
   return (
-    <section className="b-main-container">
-      {imagesArray.map((image, index) => {
+    <section
+      className="b-main-container"
+      style={{
+        backgroundImage: `linear-gradient(rgba(13, 13, 13, 0.1), rgba(13, 13, 13, 1)),url(${imagesArray[currentIndex].src})`
+      }}
+    >
+      {/* {imagesArray.map((image, index) => {
         return (
           <div
             className={index === currentIndex ? 'b-current-slide' : 'b-slide'}
@@ -46,7 +51,7 @@ const SliderHome: React.FC = () => {
             {index === currentIndex && <img src={image.src} alt="anime" />}
           </div>
         );
-      })}
+      })} */}
       <div className="b-dots-container">
         {imagesArray.map((image, index) => {
           return (
