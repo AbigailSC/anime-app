@@ -50,17 +50,16 @@ const SliderHome: React.FC = () => {
       <div className="b-dots-container">
         {imagesArray.map((image, index) => {
           return (
-            <button
-              className="b-dots--btn"
-              key={image.id}
-              onClick={() => handleResetDelay()}
-            >
+            <div className="b-dots--btn" key={image.id}>
               {pageButtons({
                 index,
                 active: index === currentIndex,
-                onClick: () => setCurrentIndex(index)
+                onClick: () => {
+                  setCurrentIndex(index);
+                  handleResetDelay();
+                }
               })}
-            </button>
+            </div>
           );
         })}
       </div>
