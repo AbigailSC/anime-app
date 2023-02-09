@@ -2,8 +2,8 @@
 @import '@styles/_responsive.scss';
 
 .b-navbar{
-  background-color: $backgroundSecondaryColor;
-  backdrop-filter: blur(10px);
+  background-color: $backgroundSecondaryColorOpacity;
+  backdrop-filter: blur(4px);
   width: 100%;
   position: fixed;
 }
@@ -21,6 +21,10 @@
   background-color: rgba(255, 255, 255, 0.2);
   color: $backgroundTertiaryColor;
   border-radius: 1em;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $backgroundTertiaryColor;
 }
 .b-form-group__btn {
   position: absolute;
@@ -154,6 +158,7 @@
     position: relative;
     width: 80%;
   }
+  
 }
 
 @include tablet {
@@ -181,16 +186,26 @@
     justify-content: space-between;
     width: 100%;
   }
+  .b-container__form-group {
+    position: relative;
+    width: 35%;
+  }
 }
 
 @include desktop {
   .b-container__header{
     display: flex;
-    padding-right: 2em;
+    padding-right: 1em;
   }
   .b-container__form-group {
     position: relative;
-    width: 50%;
+    width: 35%;
+  }
+  .b-container-items--hidden, .b-container-items {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 

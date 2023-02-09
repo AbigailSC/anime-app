@@ -13,7 +13,7 @@
 }
 
 @mixin desktop {
-  @media (min-width: ($tablet + 1)) and (max-width: ($desktop - 1)) {
+  @media (min-width: ($tablet)) and (max-width: ($desktop - 1)) {
     @content;
   }
 }
