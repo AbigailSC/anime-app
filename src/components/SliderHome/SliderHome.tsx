@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { useInterval } from '@hooks/useInterval';
 import { pageButtonsProps } from '@interfaces/components/sliderInterfaces';
 import { imagesArray } from '@utils/dataImage';
+import { BsPlayFill } from 'react-icons/bs';
+import { BiPlus } from 'react-icons/bi';
 import './SliderHome.scss';
 
 const SliderHome: React.FC = () => {
@@ -52,6 +54,15 @@ const SliderHome: React.FC = () => {
               <>
                 <h2 className="b-current-slide__title">{anime.name}</h2>
                 <p className="b-current-slide__description">{anime.summary}</p>
+                <div className="b-description__container">
+                  <button className="b-description__btn">
+                    <BsPlayFill className="b-btn__icon" /> Watch Now
+                  </button>
+                  <button className="b-description__btn">
+                    <BiPlus className="b-btn__icon" />
+                    See later
+                  </button>
+                </div>
               </>
             )}
           </div>

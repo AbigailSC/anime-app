@@ -15,13 +15,44 @@
     justify-content: center;
     align-items: flex-start;
     padding: 0 5em;
+    gap: 2em;
     .b-current-slide__title{
-      font-size: 4em;
+      font-size: 3.5em;
       font-weight: 700;
       color: $baseColor;
       text-align: start;
-      margin-bottom: 1em;
-      
+    }
+    .b-current-slide__description{
+      font-size: 1.25em;
+      font-weight: 400;
+    }
+    .b-description__container{
+      display: flex;
+      gap: 2em;
+      .b-description__btn{
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 1em;
+        font-weight: 400;
+        color: $backgroundTertiaryColor;
+        cursor: pointer;
+        @include transition(all);
+        &:hover > .b-btn__icon{
+          color: #fff;
+        }
+        .b-btn__icon{
+          color: $backgroundTertiaryColor;
+          font-size: 1.5em;
+          background-color: $baseColor;
+          border-radius: 100%;
+          padding: 0.25em;
+          width: 32px;
+          height: 32px;
+        }
+      }
     }
   }
   .b-slide{
@@ -59,15 +90,65 @@
 }
 @include mobile {
   .b-main-container{
-    display: flex;
-    justify-content: center;
     position: relative;
     .b-current-slide{
+      width: 100%;
       padding: 0 2em;
+      align-items: center;
+      .b-current-slide__title{
+        font-size: 2em;
+        text-align: center;
+      }
+      .b-current-slide__description{
+        font-size: 1em;
+        text-align: center;
+      }
     }
     .b-dots-container{
       top: 95%;
+      right: 70%;
+      left: 30%;
+    }
+  }
+}
+
+@include tablet{
+  .b-main-container{
+    .b-current-slide{
+      width: 100%;
       padding: 0 2em;
+      align-items: center;
+      .b-current-slide__title{
+        font-size: 3em;
+        text-align: center;
+      }
+      .b-current-slide__description{
+        font-size: 1em;
+        text-align: center;
+      }
+    }
+    .b-dots-container{
+      top: 95%;
+      right: 60%;
+      left: 40%;
+    }
+  }
+}
+
+@include desktop{
+  .b-main-container{
+    .b-current-slide{
+      width: 100%;
+      padding: 0 5em;
+    }
+  }
+}
+
+@include desktop-lg{
+  .b-main-container{
+    .b-current-slide{
+      width: 80%;
+      padding: 0 5em;
     }
   }
 }
