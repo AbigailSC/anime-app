@@ -1,23 +1,34 @@
 import csm from '@assets/bgImages/csm.jpeg';
 import bocchi from '@assets/bgImages/bocchi.jpg';
-import snk from '@assets/bgImages/snk.jpg';
-import tensei from '@assets/bgImages/tensei.jpg';
+import snk from '@assets/bgImages/snks4.jpg';
+import kny from '@assets/bgImages/kny.jpg';
 
 export const imagesArray = [
   {
+    id: 1,
     src: csm,
-    id: 1
+    name: 'Chainsaw Man',
+    summary:
+      'Chainsaw Man follows the story of Denji, an impoverished young man who makes a contract that fuses his body with that of a dog-like devil named Pochita, granting him the ability to transform parts of his body into chainsaws.'
   },
   {
+    id: 2,
     src: bocchi,
-    id: 2
+    name: 'Bocchi the Rock',
+    summary:
+      'A shy, awkward, and lonely high school student dreams of being in a band despite her doubts and worries, but when she is recruited to be the guitarist of a group looking to make it big, she realizes her dream may be able to be fulfilled and come true.'
   },
   {
+    id: 3,
     src: snk,
-    id: 3
+    name: 'Shingeki no Kyojin Final Season Part 3',
+    summary: `Since its release in 2013, with an epic plot, the dark fantasy anime Attack on Titan has established itself as one of the greatest of the new generation. The series began as a show about humankind fighting titans, but as the story progressed, themes such as violence, discrimination, politics, and freedom emerged within a deep and twisted plot.`
   },
   {
-    src: tensei,
-    id: 4
+    id: 4,
+    src: kny,
+    name: 'Kimetsu no Yaiba Season 3',
+    summary:
+      'Demon Slayer season three will see Tanjiro travel to the Swordsmith Village in order to have his blade repaired by Hotaru Haganezuka. While there, Tanjiro and co will, of course, be beset by a horde of demons (including a Upper Rank Six that splits themselves across multiple bodies).'
   }
 ];

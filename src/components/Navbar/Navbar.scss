@@ -12,7 +12,7 @@
     align-items: center;
     width: 100%;
     height: 80px;
-    padding: 0 2em;
+    padding: 0 5em;
     .b-nabvar__title{
       color: $backgroundTertiaryColor;
       font-size: 1.5em;
@@ -160,32 +160,37 @@
 }
 
 @include tablet {
-  .b-navbar__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    padding: 0 1em;
-    .b-container__header{
+  .b-navbar{
+    .b-navbar__container {
       display: flex;
-      padding-right: 1em;
-      .b-nabvar__title{
-        color: $backgroundTertiaryColor;
-        font-size: 1em;
-        font-weight: $fontWeightBold;
-        cursor: pointer;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 80px;
+      padding: 0 2em;
+      .b-container__header{
+        display: flex;
+        padding-right: 1em;
+        .b-nabvar__title{
+          color: $backgroundTertiaryColor;
+          font-size: 1em;
+          font-weight: $fontWeightBold;
+          cursor: pointer;
+        }
       }
-    }
-  }
-  .b-container-items--hidden, .b-container-items {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100%;
-    .b-container__form-group {
-      position: relative;
-      width: 35%;
+      .b-container-items--hidden, .b-container-items {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        .b-container__form-group {
+          position: relative;
+          width: 35%;
+        }
+        .b-items__ul{
+          gap: 0.5em;
+        }
+      }
     }
   }
 }

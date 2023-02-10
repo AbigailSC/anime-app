@@ -5,7 +5,7 @@ import './Navbar.scss';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
 
 const Navbar: React.FC = () => {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
 
   const handleMenu = (): void => {
     setMenu(!menu);

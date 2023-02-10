@@ -42,16 +42,21 @@ const SliderHome: React.FC = () => {
         backgroundImage: `linear-gradient(rgba(13, 13, 13, 0.1), rgba(13, 13, 13, 1)),url(${imagesArray[currentIndex].src})`
       }}
     >
-      {/* {imagesArray.map((image, index) => {
+      {imagesArray.map((anime, index) => {
         return (
           <div
             className={index === currentIndex ? 'b-current-slide' : 'b-slide'}
             key={index}
           >
-            {index === currentIndex && <img src={image.src} alt="anime" />}
+            {index === currentIndex && (
+              <>
+                <h2 className="b-current-slide__title">{anime.name}</h2>
+                <p className="b-current-slide__description">{anime.summary}</p>
+              </>
+            )}
           </div>
         );
-      })} */}
+      })}
       <div className="b-dots-container">
         {imagesArray.map((image, index) => {
           return (
