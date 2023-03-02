@@ -1,8 +1,19 @@
+import React, { useEffect } from 'react';
 import SliderHome from '@components/SliderHome/SliderHome';
-import React from 'react';
+import { useCustomDispatch } from '@hooks/redux';
+import {
+  getRecentEpisodes,
+  getTopAiringAnimes
+} from '@store/slices/animes/anime';
 import './Home.scss';
 
 const Home: React.FC = () => {
+  const dispatch = useCustomDispatch();
+  useEffect(() => {
+    void dispatch(getRecentEpisodes());
+    void dispatch(getTopAiringAnimes());
+  }, [dispatch]);
+
   return (
     <div className="Home">
       <SliderHome />

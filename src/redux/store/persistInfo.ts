@@ -5,3 +5,9 @@ export const persistUserConfig = {
   storage,
   whitelist: ['user']
 };
+
+export const persistAnimeConfig = {
+  key: 'anime',
+  storage,
+  whitelist: ['recentEpisodes']
+};

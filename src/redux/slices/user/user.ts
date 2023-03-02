@@ -1,4 +1,4 @@
-import { IUser, IUserInformation } from '@interfaces/redux/user';
+import { IUser, IUserInformation } from '@interfaces/redux/user.interface';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Thunk } from '@store/store/store';
 // import axios from '@utils/axios';

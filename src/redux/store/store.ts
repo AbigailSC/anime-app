@@ -1,13 +1,18 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
-import { persistUserConfig } from './persistInfo';
+import { persistUserConfig, persistAnimeConfig } from './persistInfo';
 import userReducer from '@store/slices/user/user';
+import animeReducer from '@store/slices/animes/anime';
 
 const store = configureStore({
   reducer: {
     user: persistReducer<ReturnType<typeof userReducer>>(
       persistUserConfig,
       userReducer
+    ),
+    anime: persistReducer<ReturnType<typeof animeReducer>>(
+      persistAnimeConfig,
+      animeReducer
     )
   },
   middleware: (defaultMiddleware) =>

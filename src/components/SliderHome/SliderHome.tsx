@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react';
 import { useInterval } from '@hooks/useInterval';
-import { pageButtonsProps } from '@interfaces/components/sliderInterfaces';
+import { pageButtonsProps } from '@interfaces/components/slider.Interface';
 import { imagesArray } from '@utils/dataImage';
 import { BsPlayFill } from 'react-icons/bs';
 import { BiPlus } from 'react-icons/bi';
