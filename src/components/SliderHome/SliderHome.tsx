@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react';
+import { BsPlayFill } from 'react-icons/bs';
+import { BiPlus } from 'react-icons/bi';
 import { useInterval } from '@hooks/useInterval';
 import { pageButtonsProps } from '@interfaces/components/slider.Interface';
 import { imagesArray } from '@utils/dataImage';
-import { BsPlayFill } from 'react-icons/bs';
-import { BiPlus } from 'react-icons/bi';
 import './SliderHome.scss';
 
 const SliderHome: React.FC = () => {
@@ -41,7 +41,10 @@ const SliderHome: React.FC = () => {
     <section
       className="b-main-container"
       style={{
-        backgroundImage: `linear-gradient(rgba(13, 13, 13, 0.1), rgba(13, 13, 13, 1)),url(${imagesArray[currentIndex].src})`
+        backgroundImage: `linear-gradient(
+          rgba(13, 13, 13, 0.1),
+          rgba(13, 13, 13, 1)),url(${imagesArray[currentIndex].src}
+        )`
       }}
     >
       {imagesArray.map((anime, index) => {

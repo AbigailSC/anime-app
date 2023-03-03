@@ -102,12 +102,13 @@
       .b-current-slide__description{
         font-size: 1em;
         text-align: center;
+        
       }
     }
     .b-dots-container{
+      left: 0;
+      right: 0;
       top: 95%;
-      right: 67%;
-      left: 33%;
     }
   }
 }
