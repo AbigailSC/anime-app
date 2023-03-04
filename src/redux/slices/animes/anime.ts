@@ -1,7 +1,11 @@
 import {
   IAnime,
   IRecentEpisodes,
-  ITopAnimes
+  ITopAnimes,
+  IAnimeByGenre,
+  ISearchAnime,
+  IAnimeDetails,
+  IAnimeEpisodes
 } from '@interfaces/redux/animes.interface';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Thunk } from '@store/store/store';
@@ -10,7 +14,11 @@ import { AxiosResponse, AxiosError } from 'axios';
 
 const initialState: IAnime = {
   recentEpisodes: null,
-  topAnimes: null,
+  topAnime: null,
+  animeByGenre: null,
+  searchAnime: null,
+  animeDetails: null,
+  watchAnime: null,
   isLoading: false
 };
 
@@ -24,14 +32,33 @@ const animeSlice = createSlice({
     setRecentEpisodes: (state, action: PayloadAction<IRecentEpisodes>) => {
       state.recentEpisodes = action.payload;
     },
-    setTopAnimes: (state, action: PayloadAction<ITopAnimes>) => {
-      state.topAnimes = action.payload;
+    setTopAnime: (state, action: PayloadAction<ITopAnimes>) => {
+      state.topAnime = action.payload;
+    },
+    setAnimeByGenre: (state, action: PayloadAction<IAnimeByGenre>) => {
+      state.animeByGenre = action.payload;
+    },
+    setSearchAnime: (state, action: PayloadAction<ISearchAnime>) => {
+      state.searchAnime = action.payload;
+    },
+    setAnimeDetails: (state, action: PayloadAction<IAnimeDetails>) => {
+      state.animeDetails = action.payload;
+    },
+    setWatchAnime: (state, action: PayloadAction<IAnimeEpisodes>) => {
+      state.watchAnime = action.payload;
     }
   }
 });
 
-export const { setIsLoading, setRecentEpisodes, setTopAnimes } =
-  animeSlice.actions;
+export const {
+  setIsLoading,
+  setRecentEpisodes,
+  setTopAnime,
+  setAnimeByGenre,
+  setSearchAnime,
+  setAnimeDetails,
+  setWatchAnime
+} = animeSlice.actions;
 
 export default animeSlice.reducer;
 
@@ -56,7 +83,69 @@ export const getTopAiringAnimes =
     dispatch(setIsLoading(true));
     try {
       const response: AxiosResponse = await axios.get('top-airing');
-      dispatch(setTopAnimes(response.data));
+      dispatch(setTopAnime(response.data));
+      return response;
+    } catch (error) {
+      return error as AxiosError;
+    } finally {
+      dispatch(setIsLoading(false));
+    }
+  };
+
+export const getAnimeByGenre =
+  (genre: string): Thunk =>
+  async (dispatch): Promise<AxiosResponse | AxiosError> => {
+    dispatch(setIsLoading(true));
+    try {
+      const response: AxiosResponse = await axios.get(`genre/${genre}`);
+      dispatch(setAnimeByGenre(response.data));
+      return response;
+    } catch (error) {
+      return error as AxiosError;
+    } finally {
+      dispatch(setIsLoading(false));
+    }
+  };
+
+export const searchAnime =
+  (query: string, page: number = 1): Thunk =>
+  async (dispatch): Promise<AxiosResponse | AxiosError> => {
+    dispatch(setIsLoading(true));
+    try {
+      const response: AxiosResponse = await axios.get(
+        `search/${query}/${page}`
+      );
+      dispatch(setSearchAnime(response.data));
+      return response;
+    } catch (error) {
+      return error as AxiosError;
+    } finally {
+      dispatch(setIsLoading(false));
+    }
+  };
+
+export const getAnimeDetails =
+  (id: string): Thunk =>
+  async (dispatch): Promise<AxiosResponse | AxiosError> => {
+    dispatch(setIsLoading(true));
+    try {
+      const response: AxiosResponse = await axios.get(`info/${id}`);
+      dispatch(setAnimeDetails(response.data));
+      return response;
+    } catch (error) {
+      return error as AxiosError;
+    } finally {
+      dispatch(setIsLoading(false));
+    }
+  };
+
+export const watchAnime =
+  (id: string): Thunk =>
+  async (dispatch): Promise<AxiosResponse | AxiosError> => {
+    dispatch(setIsLoading(true));
+    try {
+      const response: AxiosResponse = await axios.get(`watch/${id}`);
+      dispatch(setWatchAnime(response.data));
       return response;
     } catch (error) {
       return error as AxiosError;

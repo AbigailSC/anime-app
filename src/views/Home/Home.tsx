@@ -3,7 +3,8 @@ import SliderHome from '@components/SliderHome/SliderHome';
 import { useCustomDispatch } from '@hooks/redux';
 import {
   getRecentEpisodes,
-  getTopAiringAnimes
+  getTopAiringAnimes,
+  getAnimeByGenre
 } from '@store/slices/animes/anime';
 import './Home.scss';
 
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     void dispatch(getRecentEpisodes());
     void dispatch(getTopAiringAnimes());
+    void dispatch(getAnimeByGenre('action'));
   }, [dispatch]);
 
   return (
