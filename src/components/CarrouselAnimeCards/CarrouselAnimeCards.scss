@@ -1,0 +1,30 @@
+@import '@styles/variables.scss';
+@import '@styles/_responsive.scss';
+
+.b-carrousel {
+  width: 100%;
+  padding: 0 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  .b-carrousel__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .b-header__title{
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+  }
+  .b-carrousel__card{
+    display: flex;
+    flex-direction: column;
+    .b-card__img{
+      width: 100%;
+      padding: 0 1em;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 1em;
+    }
+  }
+}

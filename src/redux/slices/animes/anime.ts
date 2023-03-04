@@ -1,3 +1,5 @@
+import { AxiosResponse, AxiosError } from 'axios';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import {
   IAnime,
   IRecentEpisodes,
@@ -7,10 +9,8 @@ import {
   IAnimeDetails,
   IAnimeEpisodes
 } from '@interfaces/redux/animes.interface';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Thunk } from '@store/store/store';
 import axios from '@utils/axios';
-import { AxiosResponse, AxiosError } from 'axios';
 
 const initialState: IAnime = {
   recentEpisodes: null,

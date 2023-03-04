@@ -1,1 +1,1 @@
-export { default as LogOutButton } from './SliderHome';
+export { default as SliderHome } from './SliderHome';
