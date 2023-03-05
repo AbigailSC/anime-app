@@ -1,7 +1,10 @@
-import { ITopAnimes } from '@interfaces/redux/animes.interface';
+import {
+  IRecentEpisodes,
+  ITopAnimes
+} from '@interfaces/redux/animes.interface';
 
 export interface CarrouselAnimeCardsProps {
-  title: string;
-  data: ITopAnimes | null;
+  header: string;
+  data: ITopAnimes | IRecentEpisodes | null;
   hasNextPage: boolean;
 }

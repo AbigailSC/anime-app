@@ -42,6 +42,7 @@ export interface ITopAnime {
   image: string;
   url: string;
   genres: string[];
+  episodeNumber?: number;
 }
 
 /* Search by genre */
