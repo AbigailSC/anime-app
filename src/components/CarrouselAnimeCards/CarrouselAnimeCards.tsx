@@ -37,7 +37,9 @@ const CarrouselAnimeCards: React.FC<CarrouselAnimeCardsProps> = ({
           data.results.map((anime: ITopAnime | IRecentEpisode) => (
             <div key={anime.id} className="b-carrousel__card">
               <div className="b-card__image">
-                {anime.episodeNumber && <div>{anime.episodeNumber}</div>}
+                {anime.episodeNumber && (
+                  <div className="b-card__episode">{anime.episodeNumber}</div>
+                )}
                 <img
                   src={anime.image}
                   alt={anime.title}
