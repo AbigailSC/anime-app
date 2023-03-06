@@ -2,6 +2,7 @@ import csm from '@assets/bgImages/csm.jpeg';
 import bocchi from '@assets/bgImages/bocchi.jpg';
 import snk from '@assets/bgImages/snks4.jpg';
 import kny from '@assets/bgImages/kny.jpg';
+import ce from '@assets/bgImages/cyberpunk.jpg';
 
 export const imagesArray = [
   {
@@ -30,5 +31,13 @@ export const imagesArray = [
     name: 'Kimetsu no Yaiba Season 3',
     summary:
       'Demon Slayer season three will see Tanjiro travel to the Swordsmith Village in order to have his blade repaired by Hotaru Haganezuka. While there, Tanjiro and co will, of course, be beset by a horde of demons (including a Upper Rank Six that splits themselves across multiple bodies).'
+  },
+  {
+    id: 5,
+    src: ce,
+    name: 'Cyberpunk: Edgerunners',
+    summary: `
+      Cyberpunk Edgerunners is a Japanese anime television series based on the Cyberpunk 2020 role-playing game. The series is produced by Studio Bones and directed by Toshiyuki Kubooka. The series premiered on Netflix on January 15, 2021.
+    `
   }
 ];
