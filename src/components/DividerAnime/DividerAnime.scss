@@ -1,0 +1,39 @@
+.b-divider{
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: right 100% bottom 80%;
+  position: relative;
+  padding: 1em 5em;
+  .b-divider__header{
+    position: absolute;
+    font-style: italic;
+    transform-origin: 0 0;
+    transform: skew(0, -5deg);
+    text-transform: uppercase;
+    top: 30%;
+    .b-divider__title{
+      background-clip: text;
+      background: linear-gradient(-45deg, rgb(13, 13, 13), rgb(43, 45, 66));
+      font-size: 4em;
+      font-weight: 700;
+      padding: 0 0.1em;
+      letter-spacing: 0.05em;
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 6px transparent;
+      &:nth-child(2){
+        font-size: 2.5em;
+        letter-spacing: 0.15em;
+      }
+      .b-divider__title--line{
+        background-clip: none;
+        -webkit-background-clip: none;
+        -webkit-text-stroke: 2px;
+        color:rgb(13, 13, 13);
+      }
+    }
+  }
+}

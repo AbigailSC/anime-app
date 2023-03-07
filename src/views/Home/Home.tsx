@@ -6,6 +6,8 @@ import {
   getRecentEpisodes
 } from '@store/slices/animes/anime';
 import { CarrouselAnimeCards } from '@components/CarrouselAnimeCards';
+import { DividerAnime } from '@components/DividerAnime';
+import ce from '@assets/dividers/cyberpunk.jpg';
 import './Home.scss';
 
 const Home: React.FC = () => {
@@ -19,19 +21,27 @@ const Home: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div className="Home">
+    <main className="b-home">
       <SliderHome />
       <CarrouselAnimeCards
         header="Top airing anime"
         data={topAnime}
         hasNextPage={false}
       />
+      <DividerAnime
+        hasBtn={false}
+        description="Cyberpunk: Edgerunners"
+        title="Anime of the year"
+        image={ce}
+        mainColor="rgba(247, 224, 2, 0.9)"
+        secondaryColor="rgba(247, 224, 2, 0)"
+      />
       <CarrouselAnimeCards
         header="New Episode This Week"
         data={recentEpisodes}
         hasNextPage={false}
       />
-    </div>
+    </main>
   );
 };
 

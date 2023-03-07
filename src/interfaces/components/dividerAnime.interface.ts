@@ -1,6 +1,8 @@
 export interface DividerAnimeProps {
   description: string;
-  btnText: string;
+  hasBtn: boolean;
   image: string;
-  imageAlt: string;
+  title?: string;
+  mainColor: string;
+  secondaryColor: string;
 }
