@@ -92,6 +92,26 @@
     height: 300px;
     background-position: 85% 0%;
     padding: 0 2em;
+    &:nth-child(5){
+      .b-divider__header{
+        .b-divider__title{
+          font-size: 1.75em;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          background-clip: none;
+          -webkit-background-clip: unset;
+          -webkit-text-stroke: unset;
+          background: none;
+          letter-spacing: 0;
+          color: $backgroundTertiaryColor;
+          &:nth-child(2){
+            font-size: 1.5em;
+            letter-spacing: 0.15em;
+            letter-spacing: 0;
+          }
+        }
+      }
+    }
     .b-divider__header{
       top: 40%;
       left: 0;
@@ -108,6 +128,11 @@
         }
       }
     }
+    .b-divider__btn{
+      width: 100%;
+      padding: 1em;
+      border-radius: 1em;
+    }
   }
 }
 
@@ -116,6 +141,11 @@
     height: 320px;
     background-position: 85% 0%;
     padding: 0 2em;
+    &:nth-child(5){
+      .b-divider__header{
+        text-align: start;
+      }
+    }
     .b-divider__header{
       top: 40%;
       left: 0;
@@ -148,6 +178,7 @@
       padding: 0 5em;
       text-align: center;
       .b-divider__title{
+        text-align: start;
         font-size: 3.5em;
         &:nth-child(2){
           font-size: 2.5em;

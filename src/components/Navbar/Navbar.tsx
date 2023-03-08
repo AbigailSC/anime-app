@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
               <span>T</span>rending
             </li>
             <li className="b-items__li">
-              <span>C</span>ategories
+              <span>N</span>ews
             </li>
           </ul>
         </div>
