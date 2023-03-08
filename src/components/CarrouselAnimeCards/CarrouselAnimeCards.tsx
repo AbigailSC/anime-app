@@ -29,8 +29,6 @@ const CarrouselAnimeCards: React.FC<CarrouselAnimeCardsProps> = ({
         swipeable={false}
         draggable={false}
         infinite={true}
-        containerClass="carousel-container"
-        itemClass="carousel-item-padding-40-px"
       >
         {data !== null ? (
           data.results instanceof Array &&
