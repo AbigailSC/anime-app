@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import React, { useState } from 'react';
+import React from 'react';
 import Carousel from 'react-multi-carousel';
 import { CarrouselAnimeCardsProps } from '@interfaces/components/carrouselAnimeCards.interface';
-import { AiTwotoneStar, AiOutlineStar } from 'react-icons/ai';
 import { responsive } from './responsiveData';
 import 'react-multi-carousel/lib/styles.css';
 import './CarrouselAnimeCards.scss';
@@ -13,11 +12,6 @@ const CarrouselAnimeCards: React.FC<CarrouselAnimeCardsProps> = ({
   data,
   hasNextPage
 }) => {
-  const [isFavorite, setIsFavorite] = useState(false);
-
-  const handleFavorite = (): void => {
-    setIsFavorite(!isFavorite);
-  };
   return (
     <div className="b-carrousel">
       <div className="b-carrousel__header">
@@ -45,10 +39,6 @@ const CarrouselAnimeCards: React.FC<CarrouselAnimeCardsProps> = ({
                 />
               </div>
               <p className="b-card__title">{anime.title}</p>
-              <button className="b-card__btn" onClick={() => handleFavorite()}>
-                {isFavorite ? <AiTwotoneStar /> : <AiOutlineStar />}
-                add to watchlist
-              </button>
             </div>
           ))
         ) : (
