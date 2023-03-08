@@ -14,7 +14,7 @@
     width: 100%;
     height: 80px;
     padding: 0 5em;
-    .b-nabvar__title{
+    .b-navbar__title{
       color: $backgroundTertiaryColor;
       font-size: 1.5em;
       font-weight: $fontWeightBold;
@@ -76,7 +76,7 @@
         color: $backgroundTertiaryColor;
         cursor: pointer;
         font-size: 1em;
-        @include transition(all, 0.2s, ease);
+        @include transition(all, 0.1s, ease);
         &:hover > span {
           color: $baseColor;
           @include transition(all, 0.2s, ease);
@@ -106,7 +106,7 @@
         width: 100%;
         height: 80px;
         padding: 0 2em;
-        .b-nabvar__title{
+        .b-navbar__title{
           color: $backgroundTertiaryColor;
           font-size: 1.5em;
           font-weight: $fontWeightBold;

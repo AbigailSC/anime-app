@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
     <nav className={menu ? 'b-navbar' : 'b-navbar b-navbar--mobile'}>
       <div className="b-navbar__container">
         <div className="b-container__header">
-          <h2 className="b-nabvar__title">
+          <h2 className="b-navbar__title">
             <span>K</span>udasai
           </h2>
           <button className="b-container__btn" onClick={() => handleMenu()}>

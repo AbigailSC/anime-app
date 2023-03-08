@@ -23,21 +23,21 @@ export const imagesArray = [
     id: 3,
     src: snk,
     name: 'Shingeki no Kyojin Final Season Part 3',
-    summary: `Since its release in 2013, with an epic plot, the dark fantasy anime Attack on Titan has established itself as one of the greatest of the new generation. The series began as a show about humankind fighting titans, but as the story progressed, themes such as violence, discrimination, politics, and freedom emerged within a deep and twisted plot.`
+    summary: `The series began as a show about humankind fighting titans, but as the story progressed, themes such as violence, discrimination, politics, and freedom emerged within a deep and twisted plot.`
   },
   {
     id: 4,
     src: kny,
     name: 'Kimetsu no Yaiba Season 3',
     summary:
-      'Demon Slayer season three will see Tanjiro travel to the Swordsmith Village in order to have his blade repaired by Hotaru Haganezuka. While there, Tanjiro and co will, of course, be beset by a horde of demons (including a Upper Rank Six that splits themselves across multiple bodies).'
+      'Demon Slayer season three will see Tanjiro travel to the Swordsmith Village in order to have his blade repaired by Hotaru Haganezuka. While there, Tanjiro and co will, of course, be beset by a horde of demons.'
   },
   {
     id: 5,
     src: ce,
     name: 'Cyberpunk: Edgerunners',
     summary: `
-      Cyberpunk Edgerunners is a Japanese anime television series based on the Cyberpunk 2020 role-playing game. The series is produced by Studio Bones and directed by Toshiyuki Kubooka. The series premiered on Netflix on January 15, 2021.
+      Cyberpunk Edgerunners is a Japanese anime television series based on the Cyberpunk 2020 role-playing game. The series is produced by Studio Bones and directed by Toshiyuki Kubooka.
     `
   }
 ];

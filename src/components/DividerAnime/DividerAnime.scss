@@ -11,6 +11,37 @@
   background-position: right 100% bottom 80%;
   position: relative;
   padding: 1em 5em;
+  gap: 2em;
+  &:nth-child(5){
+    .b-divider__header{
+      transform: none;
+      position: static;
+      padding: 0;
+      text-transform: none;
+      .b-divider__title{
+        font-size: 3em;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        background-clip: none;
+        -webkit-background-clip: unset;
+        -webkit-text-stroke: unset;
+        background: none;
+        letter-spacing: 0;
+        color: $backgroundTertiaryColor;
+        &:nth-child(2){
+          font-size: 2em;
+          letter-spacing: 0.15em;
+          letter-spacing: 0;
+        }
+        .b-divider__title--line{
+          background-clip: none;
+          -webkit-background-clip: none;
+          -webkit-text-stroke: 0;
+          color:$secondaryColor;
+        }
+      }
+    }
+  }
   .b-divider__header{
     position: absolute;
     font-style: italic;
@@ -39,7 +70,22 @@
       }
     }
   }
+  .b-divider__btn{
+    width: 140px;
+    padding: 1em;
+    border-radius: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    background: $secondaryColor;
+    color: $backgroundTertiaryColor;
+    &:hover{
+      background: $backgroundTertiaryColor;
+      color: $secondaryColor;
+      @include transition(all);
+    }
+  }
 }
+
 
 @include mobile {
   .b-divider{
@@ -115,6 +161,5 @@
 @include desktop-xl {
   .b-divider{
     background-position: 80% 0%;
-    
   }
 }

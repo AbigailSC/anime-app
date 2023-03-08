@@ -8,6 +8,7 @@ import {
 import { CarrouselAnimeCards } from '@components/CarrouselAnimeCards';
 import { DividerAnime } from '@components/DividerAnime';
 import ce from '@assets/dividers/cyberpunk.jpg';
+import eva from '@assets/dividers/evangelion.jpg';
 import './Home.scss';
 
 const Home: React.FC = () => {
@@ -34,12 +35,20 @@ const Home: React.FC = () => {
         title="Anime of the year"
         image={ce}
         mainColor="rgba(247, 224, 2, 0.9)"
-        secondaryColor="rgba(247, 224, 2, 0)"
+        secondaryColor="rgba(247, 224, 2, 0.1)"
       />
       <CarrouselAnimeCards
         header="New Episode This Week"
         data={recentEpisodes}
         hasNextPage={false}
+      />
+      <DividerAnime
+        hasBtn={true}
+        description="Your favorite articles are waiting for you"
+        title="Visit our merch store"
+        image={eva}
+        mainColor="rgba(43, 45, 66, 0.9)"
+        secondaryColor="rgba(43, 45, 66, 0.1)"
       />
     </main>
   );
