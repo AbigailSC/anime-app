@@ -7,23 +7,19 @@
   display: flex;
   flex-direction: column;
   gap: 2em;
-  
   .b-carrousel__header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     .b-header__title{
       font-size: 1.5em;
       font-weight: 500;
-      
     }
   }
   .b-carrousel__card{
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    
     .b-card__image{
       width: 100%;
       height: 560px;
@@ -38,7 +34,7 @@
         padding: 0.75em 1em;
         background: $baseColor;
         color: #fff;
-        font-size: 0.8em;
+        font-size: 1em;
         font-weight: 500;
         border-radius: 0 0 1em 0;
         z-index: 2;

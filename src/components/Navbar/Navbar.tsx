@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './Navbar.scss';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
+import { Title } from '@components/Title';
 
 const Navbar: React.FC = () => {
   const [menu, setMenu] = useState(true);
@@ -15,9 +16,7 @@ const Navbar: React.FC = () => {
     <nav className={menu ? 'b-navbar' : 'b-navbar b-navbar--mobile'}>
       <div className="b-navbar__container">
         <div className="b-container__header">
-          <h2 className="b-navbar__title">
-            <span>K</span>udasai
-          </h2>
+          <Title />
           <button className="b-container__btn" onClick={() => handleMenu()}>
             {menu ? <AiOutlineMenu /> : <AiOutlineClose />}
           </button>

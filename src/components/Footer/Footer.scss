@@ -1,0 +1,99 @@
+@import '@styles/_variables.scss';
+@import '@styles/_responsive.scss';
+
+.b-footer{
+  background-color: $backgroundSemiColor;
+  width: 100%;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  .b-footer__body{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3em 5em 5em 5em;
+    .b-footer__container{
+      width: 22%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      .b-footer__container__text{
+        letter-spacing: 1px;
+      }
+      .b-footer__container__title{
+        font-weight: 700;
+        .b-footer__container__title--span{
+          color: $baseColor;
+        }
+      }
+      .b-footer__container__ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        .b-ul__li{
+          cursor: pointer;
+          color: $textFooter;
+          @include transition(all, 0.1s);
+          &:hover{
+            color: $backgroundTertiaryColor;
+          }
+        }
+      }
+      .b-footer__container__form{
+        width: 100%;
+        display: flex;
+        gap: 0.5em;
+        .b-form__input{
+          width: 100%;
+          padding: 0.5em;
+          border: none;
+          border-radius: 0.5em;
+          outline: none;
+          padding: 1em;
+          background-color: $backgroundTertiaryColor;
+          color: $backgroundColor;
+        }
+        .b-form__btn{
+          padding: 0.5em;
+          border: none;
+          border-radius: 0.5em;
+          outline: none;
+          font-weight: 600;
+          padding: 1em;
+          background-color: $secondaryColor;
+          color: $backgroundTertiaryColor;
+          cursor: pointer;
+          @include transition(all, 0.1s);
+          &:hover{
+            background-color: $backgroundTertiaryColor;
+            color: $secondaryColor;
+          }
+        }
+      }
+      .b-socialMedia{
+        display: flex;
+        gap: 1em;
+        .b-socialMedia__btn{
+          background-color: $textFooter;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2em;
+          height: 2em;
+          border-radius: 50%;
+          cursor: pointer;
+          @include transition(all, 0.1s);
+          &:hover{
+            color: $baseColor;
+            background-color: $backgroundTertiaryColor;
+          }
+        }
+      }
+    }
+  }
+  .b-footer__p{
+    text-align: center;
+  }
+}

@@ -1,0 +1,11 @@
+@import '@styles/_variables.scss';
+
+.b-navbar__title{
+  color: $backgroundTertiaryColor;
+  font-size: 1.5em;
+  font-weight: $fontWeightBold;
+  cursor: pointer;
+  span {
+    color: $baseColor;
+  }
+}

@@ -14,15 +14,6 @@
     width: 100%;
     height: 80px;
     padding: 0 5em;
-    .b-navbar__title{
-      color: $backgroundTertiaryColor;
-      font-size: 1.5em;
-      font-weight: $fontWeightBold;
-      cursor: pointer;
-      span {
-        color: $baseColor;
-      }
-    }
     .b-container__btn {
       display: none;
     }

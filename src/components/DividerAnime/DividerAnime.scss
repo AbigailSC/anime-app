@@ -78,10 +78,10 @@
     cursor: pointer;
     background: $secondaryColor;
     color: $backgroundTertiaryColor;
+    @include transition(all);
     &:hover{
       background: $backgroundTertiaryColor;
       color: $secondaryColor;
-      @include transition(all);
     }
   }
 }
