@@ -76,3 +76,17 @@
     }
   }
 }
+
+@include mobile {
+  .b-carrousel {
+    padding: 0 1em;
+    .b-carrousel__card{
+      .b-card__image{
+        height: 300px;
+        .b-image--zoom{
+          height: 300px;
+        }
+      }
+    }
+  }
+}

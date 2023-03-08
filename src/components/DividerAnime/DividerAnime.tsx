@@ -36,7 +36,6 @@ const DividerAnime: React.FC<DividerAnimeProps> = ({
         {title !== undefined && titleModified(title)}
         {description !== undefined && titleModified(description)}
       </div>
-      <p className="b-divider__text">{description}</p>
       {hasBtn && <button className="b-divider__btn">See more</button>}
     </div>
   );

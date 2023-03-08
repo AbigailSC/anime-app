@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 @mixin mobile {
-  @media (max-width: $mobile) {
+  @media (max-width: $mobile) and (min-width: 0) {
     @content;
   }
 }

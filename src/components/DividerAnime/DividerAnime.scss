@@ -1,3 +1,6 @@
+@import '@styles/_variables.scss';
+@import '@styles/_responsive.scss';
+
 .b-divider{
   width: 100%;
   height: 320px;
@@ -35,5 +38,83 @@
         color:rgb(13, 13, 13);
       }
     }
+  }
+}
+
+@include mobile {
+  .b-divider{
+    height: 300px;
+    background-position: 85% 0%;
+    padding: 0 2em;
+    .b-divider__header{
+      top: 40%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      text-align: center;
+      .b-divider__title{
+        font-size: 2em;
+        &:nth-child(2){
+          font-size: 1.25em;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .b-divider{
+    height: 320px;
+    background-position: 85% 0%;
+    padding: 0 2em;
+    .b-divider__header{
+      top: 40%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      text-align: center;
+      .b-divider__title{
+        font-size: 3em;
+        &:nth-child(2){
+          font-size: 2em;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .b-divider{
+    background-position: 85% 0%;
+    .b-divider__header{
+      top: 40%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      padding: 0 5em;
+      text-align: center;
+      .b-divider__title{
+        font-size: 3.5em;
+        &:nth-child(2){
+          font-size: 2.5em;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+}
+
+@include desktop-xl {
+  .b-divider{
+    background-position: 80% 0%;
+    
   }
 }

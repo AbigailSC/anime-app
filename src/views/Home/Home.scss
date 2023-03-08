@@ -10,3 +10,9 @@
   width: 100%;
   gap: 6em;
 }
+
+@include mobile {
+  .b-home {
+    gap: 2em;
+  }
+}
