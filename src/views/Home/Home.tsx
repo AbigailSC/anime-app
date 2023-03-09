@@ -7,10 +7,11 @@ import {
 } from '@store/slices/animes/anime';
 import { CarrouselAnimeCards } from '@components/CarrouselAnimeCards';
 import { DividerAnime } from '@components/DividerAnime';
+import { Footer } from '@components/Footer';
+import { News } from '@components/News';
 import ce from '@assets/dividers/cyberpunk.jpg';
 import eva from '@assets/dividers/evangelion.jpg';
 import './Home.scss';
-import { Footer } from '@components/Footer';
 
 const Home: React.FC = () => {
   const dispatch = useCustomDispatch();
@@ -51,6 +52,7 @@ const Home: React.FC = () => {
         mainColor="rgba(43, 45, 66, 0.9)"
         secondaryColor="rgba(43, 45, 66, 0.1)"
       />
+      <News />
       <Footer />
     </main>
   );

@@ -1,0 +1,15 @@
+.b-news{
+  width: 100%;
+  padding: 0 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  .b-news__title{
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  .b-news__card{
+    width: 400px;
+    height: 400px;
+  }
+}
