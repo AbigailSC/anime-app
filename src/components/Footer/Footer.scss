@@ -65,7 +65,7 @@
           background-color: $secondaryColor;
           color: $backgroundTertiaryColor;
           cursor: pointer;
-          @include transition(all, 0.1s);
+          @include transition(all);
           &:hover{
             background-color: $backgroundTertiaryColor;
             color: $secondaryColor;
@@ -84,7 +84,7 @@
           height: 2em;
           border-radius: 50%;
           cursor: pointer;
-          @include transition(all, 0.1s);
+          @include transition(all);
           &:hover{
             color: $baseColor;
             background-color: $backgroundTertiaryColor;

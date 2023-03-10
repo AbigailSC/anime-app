@@ -12,9 +12,11 @@ const News: React.FC = () => {
       <h3 className="b-news__title">News</h3>
       <Carousel
         responsive={responsive}
-        swipeable={false}
-        draggable={false}
+        swipeable={true}
+        draggable={true}
         infinite={true}
+        centerMode={true}
+        containerClass="carousel-container"
       >
         {newsArray instanceof Array &&
           newsArray.map((news) => (
