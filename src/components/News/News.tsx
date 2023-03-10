@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import { responsive } from '@components/CarrouselAnimeCards/responsiveData';
 import { newsArray } from '@utils/dataNews';
-import { TbClockHour3 } from '@components/Icons/Icons';
+import { AiOutlineClockCircle } from 'react-icons/ai';
 
 import './News.scss';
 
@@ -32,7 +32,7 @@ const News: React.FC = () => {
               <span>{news.category}</span>
               <p className="b-card__title">{news.title}</p>
               <div>
-                <TbClockHour3 />
+                <AiOutlineClockCircle />
                 <span>{news.date}</span>
               </div>
             </article>
