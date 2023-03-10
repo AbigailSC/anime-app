@@ -11,6 +11,7 @@ import { Footer } from '@components/Footer';
 import { News } from '@components/News';
 import ce from '@assets/dividers/cyberpunk.jpg';
 import eva from '@assets/dividers/evangelion.jpg';
+import jjk from '@assets/dividers/jjk.jpg';
 import './Home.scss';
 
 const Home: React.FC = () => {
@@ -53,6 +54,14 @@ const Home: React.FC = () => {
         secondaryColor="rgba(43, 45, 66, 0.1)"
       />
       <News />
+      <DividerAnime
+        hasBtn={false}
+        description="of Kudasai"
+        title="Join the community"
+        image={jjk}
+        mainColor="rgba(36, 124, 181,0.9)"
+        secondaryColor="rgba(36, 124, 181,0.1)"
+      />
       <Footer />
     </main>
   );
