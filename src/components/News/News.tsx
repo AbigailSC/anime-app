@@ -29,12 +29,15 @@ const News: React.FC = () => {
               )`
               }}
             >
-              <span>{news.category}</span>
-              <p className="b-card__title">{news.title}</p>
-              <div>
-                <AiOutlineClockCircle />
-                <span>{news.date}</span>
-              </div>
+              <header className="b-card__header">
+                <span className="b-card__category">{news.category}</span>
+                <p className="b-card__title">{news.title}</p>
+                <div className="b-card__footer">
+                  <span className="b-card__footer__line"></span>
+                  <AiOutlineClockCircle className="b-card__footer__icon" />
+                  <span className="b-card__footer__date">{news.date}</span>
+                </div>
+              </header>
             </article>
           ))}
       </Carousel>
