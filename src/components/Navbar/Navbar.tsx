@@ -14,7 +14,6 @@ const Navbar: React.FC = () => {
   };
 
   const location = useLocation();
-  console.log('🚀 ~ file: Navbar.tsx:17 ~ location:', location.pathname);
 
   const redirectInOtherPage = (
     title: string,
@@ -22,7 +21,7 @@ const Navbar: React.FC = () => {
   ): JSX.Element => {
     if (location.pathname !== '/') {
       return (
-        <Link to={`/${id}`}>
+        <Link to={`/${id}`} className="b-items__link">
           <li className="b-items__li">
             <span>{title.slice(0, 1)}</span>
             {title.slice(1, title.length)}
@@ -31,7 +30,7 @@ const Navbar: React.FC = () => {
       );
     } else {
       return (
-        <a href={id}>
+        <a href={id} className="b-items__link">
           <li className="b-items__li">
             <span>{title.slice(0, 1)}</span>
             {title.slice(1, title.length)}
@@ -64,9 +63,11 @@ const Navbar: React.FC = () => {
             </button>
           </form>
           <ul className="b-items__ul">
-            <li className="b-items__li">
-              <span>G</span>enres
-            </li>
+            <span className="b-items__link">
+              <li className="b-items__li">
+                <span>G</span>enres
+              </li>
+            </span>
             {redirectInOtherPage('Recent', '#recentEpisodes')}
             {redirectInOtherPage('Trending', '#topAiring')}
             {redirectInOtherPage('News', '#news')}
