@@ -1,14 +1,15 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import { responsive } from '@components/CarrouselAnimeCards/responsiveData';
+import { responsive } from '@utils/responsiveData';
 import { newsArray } from '@utils/dataNews';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 
 import './News.scss';
+import { newsProps } from '@interfaces/components/news.interface';
 
-const News: React.FC = () => {
+const News: React.FC<newsProps> = ({ id }) => {
   return (
-    <div className="b-news">
+    <div className="b-news" id={id}>
       <h3 className="b-news__title">News</h3>
       <Carousel
         responsive={responsive}

@@ -31,6 +31,7 @@ const Home: React.FC = () => {
         header="Top airing anime"
         data={topAnime}
         hasNextPage={false}
+        id="topAiring"
       />
       <DividerAnime
         hasBtn={false}
@@ -44,6 +45,7 @@ const Home: React.FC = () => {
         header="New Episode This Week"
         data={recentEpisodes}
         hasNextPage={false}
+        id="recentEpisodes"
       />
       <DividerAnime
         hasBtn={true}
@@ -53,7 +55,7 @@ const Home: React.FC = () => {
         mainColor="rgba(43, 45, 66, 0.9)"
         secondaryColor="rgba(43, 45, 66, 0.1)"
       />
-      <News />
+      <News id="news" />
       <DividerAnime
         hasBtn={false}
         description="of Kudasai"

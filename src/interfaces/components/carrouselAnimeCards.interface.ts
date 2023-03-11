@@ -7,4 +7,5 @@ export interface CarrouselAnimeCardsProps {
   header: string;
   data: ITopAnimes | IRecentEpisodes | null;
   hasNextPage: boolean;
+  id: string;
 }

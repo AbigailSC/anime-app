@@ -2,7 +2,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import { CarrouselAnimeCardsProps } from '@interfaces/components/carrouselAnimeCards.interface';
-import { responsive } from './responsiveData';
+import { responsive } from '../../utils/responsiveData';
 import 'react-multi-carousel/lib/styles.css';
 import './CarrouselAnimeCards.scss';
 import { IRecentEpisode, ITopAnime } from '@interfaces/redux/animes.interface';
@@ -10,10 +10,11 @@ import { IRecentEpisode, ITopAnime } from '@interfaces/redux/animes.interface';
 const CarrouselAnimeCards: React.FC<CarrouselAnimeCardsProps> = ({
   header,
   data,
-  hasNextPage
+  hasNextPage,
+  id
 }) => {
   return (
-    <div className="b-carrousel">
+    <div className="b-carrousel" id={id}>
       <div className="b-carrousel__header">
         <h3 className="b-header__title">{header}</h3>
         {hasNextPage && <span className="b-header__span">See all</span>}

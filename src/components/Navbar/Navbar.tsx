@@ -1,15 +1,44 @@
 // import { LoginButton } from '@components/LoginButton';
 // import { LogOutButton } from '@components/LogOutButton';
 import React, { useState } from 'react';
-import './Navbar.scss';
+import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
 import { Title } from '@components/Title';
+import './Navbar.scss';
 
 const Navbar: React.FC = () => {
   const [menu, setMenu] = useState(true);
 
   const handleMenu = (): void => {
     setMenu(!menu);
+  };
+
+  const location = useLocation();
+  console.log('🚀 ~ file: Navbar.tsx:17 ~ location:', location.pathname);
+
+  const redirectInOtherPage = (
+    title: string,
+    id: string = '#'
+  ): JSX.Element => {
+    if (location.pathname !== '/') {
+      return (
+        <Link to={`/${id}`}>
+          <li className="b-items__li">
+            <span>{title.slice(0, 1)}</span>
+            {title.slice(1, title.length)}
+          </li>
+        </Link>
+      );
+    } else {
+      return (
+        <a href={id}>
+          <li className="b-items__li">
+            <span>{title.slice(0, 1)}</span>
+            {title.slice(1, title.length)}
+          </li>
+        </a>
+      );
+    }
   };
 
   return (
@@ -38,15 +67,9 @@ const Navbar: React.FC = () => {
             <li className="b-items__li">
               <span>G</span>enres
             </li>
-            <li className="b-items__li">
-              <span>R</span>ecents
-            </li>
-            <li className="b-items__li">
-              <span>T</span>rending
-            </li>
-            <li className="b-items__li">
-              <span>N</span>ews
-            </li>
+            {redirectInOtherPage('Recent', '#recentEpisodes')}
+            {redirectInOtherPage('Trending', '#topAiring')}
+            {redirectInOtherPage('News', '#news')}
           </ul>
         </div>
       </div>
