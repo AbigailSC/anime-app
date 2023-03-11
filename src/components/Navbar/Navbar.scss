@@ -6,7 +6,7 @@
   backdrop-filter: blur(4px);
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 10000;
   .b-navbar__container {
     display: flex;
     justify-content: space-between;
@@ -96,7 +96,7 @@
     height: 100vh;
   }
   .b-navbar {
-    z-index: 5;
+    z-index: 10000;
     @include opacityColor($backgroundSecondaryColor, 0.7);
     .b-navbar__container{
       display: flex;

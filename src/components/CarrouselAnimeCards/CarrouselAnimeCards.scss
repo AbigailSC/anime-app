@@ -3,11 +3,10 @@
 
 .b-carrousel {
   width: 100%;
-  padding: 0 5em;
+  padding: 6em 5em 0 2em;
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding-top:6em;
   .b-carrousel__header{
     display: flex;
     justify-content: space-between;
@@ -80,7 +79,7 @@
 
 @include mobile {
   .b-carrousel {
-    padding: 0 2em;
+    padding: 6em 2em 0 2em;
     .b-carrousel__card{
       .b-card__image{
         height: 380px;
@@ -95,7 +94,7 @@
 
 @include tablet {
   .b-carrousel {
-    padding: 0 2em;
+    padding: 6em 2em 0 2em;
     .b-carrousel__card{
       .b-card__image{
         height: 420px;
@@ -110,7 +109,7 @@
 
 @include desktop {
   .b-carrousel {
-    padding: 0 5em;
+    padding: 6em 5em 0 5em;
     .b-carrousel__card{
       .b-card__image{
         height: 400px;
