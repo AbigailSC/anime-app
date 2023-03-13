@@ -55,16 +55,40 @@ const Footer: React.FC = () => {
           </form>
           <div className="b-socialMedia">
             <button className="b-socialMedia__btn">
-              <SlSocialFacebook />
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SlSocialFacebook />
+              </a>
             </button>
             <button className="b-socialMedia__btn">
-              <SlSocialInstagram />
+              <a
+                href="https://www.instagram.com/?hl=es"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SlSocialInstagram />
+              </a>
             </button>
             <button className="b-socialMedia__btn">
-              <SlSocialTwitter />
+              <a
+                href="https://twitter.com/home"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SlSocialTwitter />
+              </a>
             </button>
             <button className="b-socialMedia__btn">
-              <SlSocialYoutube />
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SlSocialYoutube />
+              </a>
             </button>
           </div>
         </div>
