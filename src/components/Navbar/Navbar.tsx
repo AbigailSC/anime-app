@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
 import { Title } from '@components/Title';
+import { dataGenre } from '@utils/dataGenre';
+import { BiChevronDown } from 'react-icons/bi';
 import './Navbar.scss';
 
 const Navbar: React.FC = () => {
@@ -64,8 +66,19 @@ const Navbar: React.FC = () => {
           </form>
           <ul className="b-items__ul">
             <span className="b-items__link">
-              <li className="b-items__li">
+              <li className="b-items__li b-genres__container">
                 <span>G</span>enres
+                <BiChevronDown />
+                <ul className="b-genres">
+                  {dataGenre instanceof Array &&
+                    dataGenre.map((genre: string, index) => (
+                      <li key={index} className="b-genres__li">
+                        <Link to={`/genre/${genre}`} className="b-items__link">
+                          {genre}
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
               </li>
             </span>
             {redirectInOtherPage('Recent', '#recentEpisodes')}

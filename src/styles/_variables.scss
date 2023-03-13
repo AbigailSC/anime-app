@@ -34,6 +34,14 @@ $desktop-xl: 1536px;
   transition: $property $duration $timing;
 }
 
+/* keyframes */
+
+@mixin keyframes($name){
+  @keyframes #{$name}{
+      @content;
+  }
+}
+
 /* Animations */
 
 @mixin animation($name, $duration: 1s, $timing: ease-in-out, $delay: 0s, $iteration: 1) {

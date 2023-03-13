@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
     .b-container__form-group {
       position: relative;
@@ -80,12 +81,68 @@
           font-weight: 500;
           cursor: pointer;
           font-size: 1em;
+          height: 50px;
+          display: flex;
+          align-items: center;
           @include transition(all, 0.1s, ease);
           &:hover > span {
             color: $baseColor;
             @include transition(all, 0.2s, ease);
           }
         }
+        .b-genres{
+          position: absolute;
+          top: 50px;
+          left: -1em;
+          width: 600px;
+          height: 442px;
+          flex-direction: column;
+          flex-wrap: wrap;
+          background-color: $backgroundSecondaryColor;
+          box-shadow: 0 0 30px rgba(0,0,0,.2);
+          padding: 0.5em 1em;
+          gap: 0.1em;
+          border-radius: 0.5em;
+          display: none;
+          &::before{
+            position: absolute;
+            content: "";
+            top: -6px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid $backgroundSecondaryColor;
+          }
+          .b-genres__li{
+            border-radius: 0.5em;
+            padding: 0.5em;
+            width: 140px;
+            &:hover{
+              background-color: $baseColor;
+              @include transition(all, 0.2s, ease);
+            }
+          }
+        }
+      }
+    }
+    .b-genres__container{
+      position: relative;
+      &:hover > .b-genres{
+        display: flex;
+        @include keyframes(zoomIn){
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+          100% {
+            transform: scale(1);
+          }
+        };
+        @include animation(zoomIn, 0.2s, linear);
+        @include transition(all, 0.2s, ease);
       }
     }
   }
