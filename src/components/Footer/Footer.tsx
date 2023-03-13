@@ -56,6 +56,7 @@ const Footer: React.FC = () => {
           <div className="b-socialMedia">
             <button className="b-socialMedia__btn">
               <a
+                className="b-items__link"
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noreferrer"
@@ -65,6 +66,7 @@ const Footer: React.FC = () => {
             </button>
             <button className="b-socialMedia__btn">
               <a
+                className="b-items__link"
                 href="https://www.instagram.com/?hl=es"
                 target="_blank"
                 rel="noreferrer"
@@ -74,6 +76,7 @@ const Footer: React.FC = () => {
             </button>
             <button className="b-socialMedia__btn">
               <a
+                className="b-items__link"
                 href="https://twitter.com/home"
                 target="_blank"
                 rel="noreferrer"
@@ -83,6 +86,7 @@ const Footer: React.FC = () => {
             </button>
             <button className="b-socialMedia__btn">
               <a
+                className="b-items__link"
                 href="https://www.youtube.com/"
                 target="_blank"
                 rel="noreferrer"
