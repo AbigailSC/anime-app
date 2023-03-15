@@ -25,8 +25,10 @@ const Navbar: React.FC = () => {
       return (
         <Link to={`/${id}`} className="b-items__link">
           <li className="b-items__li">
-            <span>{title.slice(0, 1)}</span>
-            {title.slice(1, title.length)}
+            <div className="b-items__li--genres">
+              <span>{title.slice(0, 1)}</span>
+              {title.slice(1, title.length)}
+            </div>
           </li>
         </Link>
       );
@@ -34,8 +36,10 @@ const Navbar: React.FC = () => {
       return (
         <a href={id} className="b-items__link">
           <li className="b-items__li">
-            <span>{title.slice(0, 1)}</span>
-            {title.slice(1, title.length)}
+            <div className="b-items__li--genres">
+              <span>{title.slice(0, 1)}</span>
+              {title.slice(1, title.length)}
+            </div>
           </li>
         </a>
       );
@@ -65,10 +69,12 @@ const Navbar: React.FC = () => {
             </button>
           </form>
           <ul className="b-items__ul">
-            <span className="b-items__link">
+            <span className="b-items__link ">
               <li className="b-items__li b-genres__container">
-                <span>G</span>enres
-                <BiChevronDown />
+                <div className="b-items__li--genres">
+                  <span>G</span>enres
+                  <BiChevronDown />
+                </div>
                 <ul className="b-genres">
                   {dataGenre instanceof Array &&
                     dataGenre.map((genre: string, index) => (
