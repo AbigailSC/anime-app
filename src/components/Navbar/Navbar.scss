@@ -224,24 +224,34 @@
             @include transition(all);
             flex-direction: column;
             height: 100%;
-            background-color: green;
             width: 100%;
             padding: 0 2em;
           }
           .b-genres{
+            background-color: $backgroundSecondaryColorOpacity;
             position: static;
-            background-color: red;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0.5em;
+            grid-row-gap: 0.25em;
             height: 600px;
+            overflow-y: scroll;
+            animation: none;
+            &::-webkit-scrollbar{
+              width: 6px;
+            }
+            &::-webkit-scrollbar-thumb{
+              background-color: $baseColor;
+              border-radius: 0.5em;
+            }
+            &::-webkit-scrollbar-track{
+              background-color: $backgroundSecondaryColorOpacity;
+              border-radius: 0.5em;
+            }
             .b-genres__li{
-              width: 50%;
-              background-color: blue;
-              &:hover{
-                background-color: transparent;
-              }
+              width: 100%;
             }
             &::before{
               content: none;
