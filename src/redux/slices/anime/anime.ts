@@ -93,11 +93,15 @@ export const getTopAiringAnimes =
   };
 
 export const getAnimeByGenre =
-  (genre: string): Thunk =>
+  (genre: string, currentPage: number = 1): Thunk =>
   async (dispatch): Promise<AxiosResponse | AxiosError> => {
     dispatch(setIsLoading(true));
     try {
-      const response: AxiosResponse = await axios.get(`genre/${genre}`);
+      const response: AxiosResponse = await axios.get(`genre/${genre}`, {
+        params: {
+          page: currentPage
+        }
+      });
       dispatch(setAnimeByGenre(response.data));
       return response;
     } catch (error) {

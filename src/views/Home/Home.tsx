@@ -4,7 +4,7 @@ import { useCustomSelector, useCustomDispatch } from '@hooks/redux';
 import {
   getTopAiringAnimes,
   getRecentEpisodes
-} from '@store/slices/animes/anime';
+} from '@store/slices/anime/anime';
 import { CarrouselAnimeCards } from '@components/CarrouselAnimeCards';
 import { DividerAnime } from '@components/DividerAnime';
 import { Footer } from '@components/Footer';

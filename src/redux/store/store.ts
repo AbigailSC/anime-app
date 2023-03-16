@@ -2,7 +2,7 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import { persistUserConfig, persistAnimeConfig } from './persistInfo';
 import userReducer from '@store/slices/user/user';
-import animeReducer from '@store/slices/animes/anime';
+import animeReducer from '@store/slices/anime/anime';
 
 const store = configureStore({
   reducer: {
