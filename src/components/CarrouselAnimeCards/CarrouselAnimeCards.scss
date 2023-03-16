@@ -3,7 +3,7 @@
 
 .b-carrousel {
   width: 100%;
-  padding: 6em 5em 0 2em;
+  padding: 6em 5em 0 5em;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -14,6 +14,18 @@
     .b-header__title{
       font-size: 1.5em;
       font-weight: 500;
+      position: relative;
+      .b-title--span{
+        position: absolute;
+        width: max-content;
+        z-index: -1;
+        color: $textFooter;
+        font-size: 2em;
+        font-weight: 300;
+        top: -0.6em;
+        left: -0.3em;
+        opacity: 0.25;
+      }
     }
   }
   .b-carrousel__card{

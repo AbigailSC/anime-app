@@ -16,7 +16,10 @@ const CarrouselAnimeCards: React.FC<CarrouselAnimeCardsProps> = ({
   return (
     <div className="b-carrousel" id={id}>
       <div className="b-carrousel__header">
-        <h3 className="b-header__title">{header}</h3>
+        <h3 className="b-header__title">
+          {header}
+          <span className="b-title--span">{header}</span>
+        </h3>
         {hasNextPage && <span className="b-header__span">See all</span>}
       </div>
       <Carousel
