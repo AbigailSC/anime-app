@@ -151,6 +151,10 @@
     }
   }
 }
+.b-navbar--background-color{
+  background-color: $backgroundSemiColor;
+  transition: background-color 0.4s linear;
+}
 
 @include mobile {
   .b-navbar--mobile{
@@ -207,7 +211,7 @@
         .b-items__ul {
           display: flex;
           flex-direction: column;
-          gap: 2em;
+          gap: 1em;
           align-items: center;
           justify-content: center;
           list-style: none;
@@ -226,6 +230,7 @@
             height: 100%;
             width: 100%;
             padding: 0 2em;
+            align-items: flex-start;
           }
           .b-genres{
             background-color: $backgroundSecondaryColorOpacity;
@@ -234,13 +239,14 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(5, 1fr);
-            grid-column-gap: 0.5em;
+            grid-column-gap: 0.25em;
             grid-row-gap: 0.25em;
-            height: 600px;
+            height: 300px;
             overflow-y: scroll;
             animation: none;
+            font-size: 0.75em;
             &::-webkit-scrollbar{
-              width: 6px;
+              width: 4px;
             }
             &::-webkit-scrollbar-thumb{
               background-color: $baseColor;
@@ -262,7 +268,10 @@
       }
     }
   }
-  
+  .b-navbar--background-color{
+    background-color: $backgroundSemiColor;
+    transition: background-color 0.4s linear;
+  }
 }
 
 @include tablet {

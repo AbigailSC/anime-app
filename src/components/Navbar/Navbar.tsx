@@ -10,6 +10,7 @@ import './Navbar.scss';
 
 const Navbar: React.FC = () => {
   const [menu, setMenu] = useState(true);
+  const [navbarBgColor, setNavbarBgColor] = useState(false);
 
   const handleMenu = (): void => {
     setMenu(!menu);
@@ -46,8 +47,29 @@ const Navbar: React.FC = () => {
     }
   };
 
+  const handleChangeBackgroundColor = (): void => {
+    if (window.scrollY >= 600) {
+      setNavbarBgColor(true);
+    } else {
+      setNavbarBgColor(false);
+    }
+  };
+
+  const checkStylesActive = (): string => {
+    if (menu) {
+      if (navbarBgColor) return 'b-navbar b-navbar--background-color';
+      else return 'b-navbar';
+    } else {
+      if (navbarBgColor)
+        return 'b-navbar b-navbar--mobile b-navbar--background-color';
+      else return 'b-navbar b-navbar--mobile';
+    }
+  };
+
+  window.addEventListener('scroll', handleChangeBackgroundColor);
+
   return (
-    <nav className={menu ? 'b-navbar' : 'b-navbar b-navbar--mobile'}>
+    <nav className={checkStylesActive()}>
       <div className="b-navbar__container">
         <div className="b-container__header">
           <Title />
