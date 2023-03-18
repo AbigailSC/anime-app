@@ -3,5 +3,6 @@ export interface AnimeCardProps {
   title: string;
   image: string;
   released: string;
-  url: string;
+  url?: string;
+  key: string;
 }

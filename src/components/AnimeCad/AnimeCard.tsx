@@ -1,7 +1,13 @@
 import React from 'react';
 import { AnimeCardProps } from '@interfaces/components/AnimeCard';
+import './AnimeCard.scss';
 
-const AnimeCard: React.FC<AnimeCardProps> = ({ title, image, released }) => {
+const AnimeCard: React.FC<AnimeCardProps> = ({
+  title,
+  image,
+  released,
+  id
+}) => {
   return (
     <div>
       <img src={image} alt={title} />
