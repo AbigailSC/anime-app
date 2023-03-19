@@ -9,10 +9,12 @@ const AnimeCard: React.FC<AnimeCardProps> = ({
   id
 }) => {
   return (
-    <div>
-      <img src={image} alt={title} />
-      <span>{released}</span>
-      <h3>{title}</h3>
+    <div className="b-anime-card">
+      <img className="b-card-image" src={image} alt={title} />
+      <div className="b-card-header">
+        <h3 className="b-header-title">{title}</h3>
+        <span className="b-header-span">{released}</span>
+      </div>
     </div>
   );
 };

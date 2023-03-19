@@ -3,4 +3,11 @@
 
 .b-details{
   padding: 80px 5em 0 5em;
+  width: 100%;
+  .b-details-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1em;
+  }
 }

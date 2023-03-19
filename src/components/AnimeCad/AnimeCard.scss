@@ -1,2 +1,25 @@
 @import '@styles/variables.scss';
 @import '@styles/_responsive.scss';
+
+.b-anime-card{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  .b-card-image{
+    border-radius: 1em;
+    height: 560px;
+  }
+  .b-card-header{
+    display: flex;
+    flex-direction: column;
+    .b-header-title{
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    .b-header-subtitle{
+      font-size: 1em;
+      font-weight: 400;
+    }
+  }
+}

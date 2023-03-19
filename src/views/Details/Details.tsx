@@ -20,20 +20,22 @@ const Details: React.FC = () => {
       <h3>
         Results by <span>{genre}</span>
       </h3>
-      {anime.isLoading ? (
-        <div>Loading...</div>
-      ) : (
-        animeByGenre?.results instanceof Array &&
-        animeByGenre.results.map((item) => (
-          <AnimeCard
-            key={item.id}
-            title={item.title}
-            image={item.image}
-            released={item.released}
-            id={item.id}
-          />
-        ))
-      )}
+      <div className="b-details-container">
+        {anime.isLoading ? (
+          <div>Loading...</div>
+        ) : (
+          animeByGenre?.results instanceof Array &&
+          animeByGenre.results.map((item) => (
+            <AnimeCard
+              key={item.id}
+              title={item.title}
+              image={item.image}
+              released={item.released}
+              id={item.id}
+            />
+          ))
+        )}
+      </div>
     </div>
   );
 };
