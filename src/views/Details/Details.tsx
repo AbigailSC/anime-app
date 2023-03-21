@@ -17,8 +17,8 @@ const Details: React.FC = () => {
 
   return (
     <div className="b-details">
-      <h3>
-        Results by <span>{genre}</span>
+      <h3 className="b-details-header">
+        Results by <span className="b-header--span">{genre}</span>
       </h3>
       <div className="b-details-container">
         {anime.isLoading ? (

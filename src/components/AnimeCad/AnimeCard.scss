@@ -9,6 +9,7 @@
   .b-card-image{
     border-radius: 1em;
     height: 560px;
+    width: 100%;
   }
   .b-card-header{
     display: flex;
@@ -16,6 +17,11 @@
     .b-header-title{
       font-size: 1.5em;
       font-weight: 600;
+      cursor: pointer;
+      @include transition(all);
+      &:hover{
+        color: $textFooter;
+      }
     }
     .b-header-subtitle{
       font-size: 1em;

@@ -4,10 +4,58 @@
 .b-details{
   padding: 80px 5em 0 5em;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  .b-details-header{
+    margin-top: 1em;
+    font-size: 2em;
+    .b-header--span{
+      color: $baseColor;
+    }
+  }
   .b-details-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 1em;
+  }
+}
+
+@include mobile{
+  .b-details{
+    padding: 80px 2em 0 2em;
+    .b-details-container{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@include tablet{
+  .b-details{
+    padding: 80px 2em 0 2em;
+    .b-details-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include desktop{
+  .b-details{
+    padding: 80px 2em 0 2em;
+    .b-details-container{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2em;
+    }
+  }
+}
+
+@include desktop-lg{
+  .b-details{
+    padding: 80px 2em 0 2em;
+    .b-details-container{
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+    }
   }
 }
