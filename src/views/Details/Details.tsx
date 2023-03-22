@@ -3,7 +3,7 @@ import { useCustomSelector, useCustomDispatch } from '@hooks/redux';
 import { getAnimeByGenre } from '@store/slices/anime/anime';
 import { useParams } from 'react-router-dom';
 import './Details.scss';
-import { AnimeCard } from '@components/AnimeCad';
+import { AnimeCard } from '@components/AnimeCard';
 
 const Details: React.FC = () => {
   const dispatch = useCustomDispatch();

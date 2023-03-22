@@ -17,6 +17,7 @@ const App: React.FC = () => {
           <Route path="/profile" element={<Profile />} />
         </Route> */}
         <Route path="/profile" element={<Profile />} />
+        <Route path="/anime/:animeId" element={<Profile />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/genre/:genre" element={<Details />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
