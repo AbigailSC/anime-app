@@ -17,8 +17,7 @@
   .b-details-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 1em;
+    gap: 3em 1em;
   }
 }
 

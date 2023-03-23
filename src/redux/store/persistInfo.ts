@@ -9,5 +9,12 @@ export const persistUserConfig = {
 export const persistAnimeConfig = {
   key: 'anime',
   storage,
-  whitelist: ['recentEpisodes']
+  whitelist: [
+    'recentEpisodes',
+    'topAnime',
+    'animeByGenre',
+    'searchAnime',
+    'animeDetails',
+    'watchAnime'
+  ]
 };

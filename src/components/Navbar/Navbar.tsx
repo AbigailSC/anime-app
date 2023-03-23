@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
   };
 
   const handleChangeBackgroundColor = (): void => {
-    if (window.scrollY >= 600) {
+    if (window.scrollY >= 80) {
       setNavbarBgColor(true);
     } else {
       setNavbarBgColor(false);

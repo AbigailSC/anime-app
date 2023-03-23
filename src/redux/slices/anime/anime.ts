@@ -46,6 +46,9 @@ const animeSlice = createSlice({
     },
     setWatchAnime: (state, action: PayloadAction<IAnimeEpisodes>) => {
       state.watchAnime = action.payload;
+    },
+    setClearGenre: (state) => {
+      state.animeByGenre = null;
     }
   }
 });
@@ -57,7 +60,8 @@ export const {
   setAnimeByGenre,
   setSearchAnime,
   setAnimeDetails,
-  setWatchAnime
+  setWatchAnime,
+  setClearGenre
 } = animeSlice.actions;
 
 export default animeSlice.reducer;
