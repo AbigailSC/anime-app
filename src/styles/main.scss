@@ -37,3 +37,19 @@ html {
     font-family: inherit;
   }
 }
+
+.skeleton {
+  width: 400px !important;
+  min-height: 590px !important;
+  border-radius: 1em;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgb(174, 187, 194);
+  }
+  100% {
+    background-color: rgb(220, 224, 227);
+  }
+}

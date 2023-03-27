@@ -1,0 +1,64 @@
+@import '@styles/_variables.scss';
+@import '@styles/_responsive.scss';
+
+.b-anime-info{
+  padding: 80px 5em 0 5em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  .b-header{
+    margin-top: 5em;
+    display: flex;
+    gap: 2em;
+    width: 80%;
+    .b-image__container{
+      position: relative;
+      .b-header__image{
+        width: 400px;
+        height: 100%;
+        border-radius: 1em;
+      }
+      .b-image--sub{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 80px;
+        height: 60px;
+        border-radius: 1em 0 1em 0;
+        background-color: $baseColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    .b-body{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      font-size: 1.2em;
+      .b-body__title{
+        font-size: 1.5em;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      .b-body__stack{
+        display: flex;
+        gap: 1em;
+        .b-stack__item{
+          font-size: 1em;
+          text-transform: uppercase;
+          color: $textFooter
+        }
+      }
+      .b-body__description{
+        font-size: 1em;
+        font-weight: 300;
+        color: $textFooter;
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { Navbar } from '@components/Navbar';
 // import { ProtectedRoute } from '@components/ProtectedRoute';
 import Profile from '@views/Profile';
 import { Details } from '@views/Details';
+import { AnimeInfo } from '@views/AnimeInfo';
 
 const App: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const App: React.FC = () => {
           <Route path="/profile" element={<Profile />} />
         </Route> */}
         <Route path="/profile" element={<Profile />} />
-        <Route path="/anime/:animeId" element={<Profile />} />
+        <Route path="/anime/:animeId" element={<AnimeInfo />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/genre/:genre" element={<Details />} />
         <Route path="*" element={<Navigate to="/404" replace />} />

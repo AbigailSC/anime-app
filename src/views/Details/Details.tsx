@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { AnimeCard } from '@components/AnimeCard';
-import './Details.scss';
-import axios from '@utils/axios';
 import { IAnimeByGenreResult } from '@interfaces/redux/animes.interface';
+import axios from '@utils/axios';
+import './Details.scss';
 
 const Details: React.FC = () => {
   const { genre } = useParams();
@@ -31,7 +31,6 @@ const Details: React.FC = () => {
     }
   };
 
-  console.log('🚀 ~ file: Details.tsx:14 ~ allResults:', allResults);
   return (
     <div className="b-details">
       <h3 className="b-details-header">

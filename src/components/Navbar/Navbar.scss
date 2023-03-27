@@ -65,17 +65,6 @@
       margin: 0;
       width: 60%;
       .b-items__link{
-        &, &:visited, &:hover, &:active {
-          font-style: inherit;
-          color: inherit;
-          background-color: transparent;
-          font-size: inherit;
-          text-decoration: none;
-          font-variant: inherit;
-          font-weight: inherit;
-          line-height: inherit;
-          font-family: inherit;
-        }
         .b-items__li {
           color: $backgroundTertiaryColor;
           font-weight: 500;
