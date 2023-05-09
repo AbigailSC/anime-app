@@ -100,11 +100,13 @@ const Navbar: React.FC = () => {
                 <ul className="b-genres">
                   {dataGenre instanceof Array &&
                     dataGenre.map((genre: string, index) => (
-                      <li key={index} className="b-genres__li">
-                        <Link to={`/genre/${genre}`} className="b-items__link">
-                          {genre}
-                        </Link>
-                      </li>
+                      <Link
+                        key={index}
+                        to={`/genre/${genre}`}
+                        className="b-items__link"
+                      >
+                        <button className="b-genres__li">{genre}</button>
+                      </Link>
                     ))}
                 </ul>
               </li>

@@ -5,9 +5,10 @@ import './AnimeInfo.scss';
 const AnimeInfo: React.FC = () => {
   const animeDetail = useCustomSelector((state) => state.anime.animeDetails);
   const anime = useCustomSelector((state) => state.anime);
-  console.log('🚀 ~ file: AnimeInfo.tsx:6 ~ animeDetail:', animeDetail);
 
-  return (
+  return anime.isLoading ? (
+    <p>loading</p>
+  ) : (
     <div className="b-anime-info">
       <div className="b-header">
         <div className="b-image__container">
@@ -18,23 +19,22 @@ const AnimeInfo: React.FC = () => {
           />
           <span className="b-image--sub">{animeDetail?.subOrDub}</span>
         </div>
-        {anime.isLoading ? (
-          <p>Loading</p>
-        ) : (
-          <div className="b-body">
-            <h1 className="b-body__title">{animeDetail?.title}</h1>
-            <div className="b-body__stack">
+        <div className="b-body">
+          <h1 className="b-body__title">{animeDetail?.title}</h1>
+          <div className="b-body__stack">
+            {animeDetail?.otherName != null && (
               <span className="b-stack__item">{animeDetail?.otherName}</span>
-              <span className="b-stack__item">{animeDetail?.releaseDate}</span>
-            </div>
-            <p className="b-body__description">{animeDetail?.description}</p>
-            {animeDetail?.status !== 'Not yet aired' ? (
-              <button className="b-body__button">Watch now</button>
-            ) : (
-              <button className="b-body__button">Notify me</button>
             )}
+            <span className="b-stack-dot"></span>
+            <span className="b-stack__item">{animeDetail?.releaseDate}</span>
           </div>
-        )}
+          <p className="b-body__description">{animeDetail?.description}</p>
+          {animeDetail?.status !== 'Not yet aired' ? (
+            <button className="b-body__button">Watch now</button>
+          ) : (
+            <button className="b-body__button">Notify me</button>
+          )}
+        </div>
       </div>
       {animeDetail?.status !== 'Not yet aired' && (
         <div>

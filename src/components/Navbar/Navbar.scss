@@ -111,6 +111,11 @@
             border-radius: 0.5em;
             padding: 0.5em;
             width: 140px;
+            background-color: transparent;
+            cursor: pointer;
+            color: $backgroundTertiaryColor;
+            text-align: start;
+            font-family: 'Poppins', sans-serif;
             &:hover{
               background-color: $baseColor;
               @include transition(all, 0.2s, ease);

@@ -6,6 +6,7 @@ import { responsive } from '../../utils/responsiveData';
 import 'react-multi-carousel/lib/styles.css';
 import './CarrouselAnimeCards.scss';
 import { IRecentEpisode, ITopAnime } from '@interfaces/redux/animes.interface';
+import { getTitleById } from '@utils/getTitle';
 
 const CarrouselAnimeCards: React.FC<CarrouselAnimeCardsProps> = ({
   header,
@@ -42,7 +43,9 @@ const CarrouselAnimeCards: React.FC<CarrouselAnimeCardsProps> = ({
                   className="b-image--zoom"
                 />
               </div>
-              <p className="b-card__title">{anime.title}</p>
+              <p className="b-card__title">
+                {anime.title === '' ? getTitleById(anime.id) : anime.title}
+              </p>
             </div>
           ))
         ) : (

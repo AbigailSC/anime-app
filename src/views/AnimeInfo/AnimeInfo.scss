@@ -48,10 +48,17 @@
       .b-body__stack{
         display: flex;
         gap: 1em;
+        align-items: center;
         .b-stack__item{
           font-size: 1em;
           text-transform: uppercase;
           color: $textFooter
+        }
+        .b-stack-dot{
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $backgroundTertiaryColor;
         }
       }
       .b-body__description{
@@ -61,19 +68,4 @@
       }
     }
   }
-}
-.b-image--box{
-  width: 400px !important;
-  height: 590px !important;
-  border-radius: 0.5em !important;
-}
-.b-title--box{
-  width: 400px !important;
-  height: 40px !important;
-  border-radius: 0.5em !important;
-}
-.b-stack--box{
-  width: 200px !important;
-  height: 20px !important;
-  border-radius: 0.25em !important;
 }
