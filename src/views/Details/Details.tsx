@@ -13,11 +13,16 @@ const Details: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    void fetchData(genre as string);
+    setAllResults([]);
+    setCurrentPage(1);
+    void fetchData(genre as string, currentPage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [genre]);
 
-  const fetchData = async (genre: string): Promise<void> => {
+  const fetchData = async (
+    genre: string,
+    currentPage: number
+  ): Promise<void> => {
     try {
       const response = await axios.get(`genre/${genre}`, {
         params: {
@@ -40,7 +45,7 @@ const Details: React.FC = () => {
       <InfiniteScroll
         className="b-details-container"
         dataLength={allResults.length}
-        next={async () => await fetchData(genre as string)}
+        next={async () => await fetchData(genre as string, currentPage)}
         hasMore={hasMore}
         loader={<h4>Loading...</h4>}
         endMessage={
